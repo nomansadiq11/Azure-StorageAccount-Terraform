@@ -21,5 +21,5 @@ resource "azurerm_storage_account" "SATerraform" {
 resource "azurerm_storage_container" "terraform_projects_states" {
   name                  = "terraformprojectsstates"
   storage_account_name  = "${azurerm_storage_account.SATerraform.name}"
-  container_access_type = "blob"
+  container_access_type = "private"
 }
